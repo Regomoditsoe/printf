@@ -3,7 +3,49 @@
 #include <stdio.h>
 #include <stdarg.h>
 
-void print_buffer(char buffer[], int *buff_ind);
+{
+	char *specifier;
+	int (*func)(va_list);
+} convert_t;
+
+int p_percent(va_list args)
+{
+	(void)args; /** Mark the parameter as unused */
+	return (0);
+}
+
+int p_char(va_list args)
+{
+	(void)args; /** Mark the parameter as unused */
+	return (0);
+}
+
+int p_string(va_list args)
+{
+	(void)args; /** Mark the parameter as unused */
+	return (0);
+}
+
+int p_integer(va_list args)
+{
+	(void)args; /** Mark the parameter as unused */
+	return (0);
+}
+
+int parser(const char *format, convert_t *func_list, va_list args)
+{
+	(void)args; /** Mark the parameter as unused */
+	(void)func_list; /** Mark the parameter as unused */
+	(void)format; /** Mark the parameter as unused */
+	return (0);
+}
+
+int p_percent(va_list args);
+int p_char(va_list args);
+int p_string(va_list args);
+int p_integer(va_list args);
+int parser(const char *format, convert_t *func_list, va_list args);
+
 /**
  * _printf - A function that produces output according to a format
  * @format: character string
@@ -11,32 +53,29 @@ void print_buffer(char buffer[], int *buff_ind);
  */
 int _printf(const char *format, ...)
 {
-	int a, printed = 0, printed_chars = 0;
+	int printed_chars;
 
-	va_list list;
-	
+	convert_t func_list[] = {
+		{"%", p_percent},
+		{"c", p_char},
+		{"s", p_string},
+		{"d", p_integer},
+		{"i", p_integer},
+		{NULL, NULL}
+	};
+
+	va_list args;
 
 	if (format == NULL)
 		return (-1);
 
-	va_start(list, format);
+	va_start(args, format);
 
-	for (a = 0; format && format[a] != '\0'; a++)
-	{
-		if (format[a] != '%')
-			printed_chars++;
+		/** Call a parser function */
 
-		else
-		{
-			if (printed == -1)
-				return (-1);
+		printed_chars = parser(format, func_list, args);
 
-			printed_chars += printed;
-		}
-	}
-
-
-	va_end(list);
+	va_end(args);
 
 	return (printed_chars);
 }
