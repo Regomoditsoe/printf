@@ -37,7 +37,7 @@ int _printf(const char *format, ...)
 		{
 			print_buffer(buffer, &buff_ind);
 			flags = get_flags(format, &a);
-			width = get_flags(format, &a, list);
+			width = get_width(format, &a, list);
 			precision = get_precision(format, &a, list);
 			size = get_size(format, &a);
 			++a;
@@ -60,8 +60,8 @@ int _printf(const char *format, ...)
 
 /**
  * print_buffer - Print the contents of the buffer
- * @buffer: arrsy of chars
- * @buff_ind: index to add next char
+ * @buffer: array of characters
+ * @buff_ind: index
  */
 void print_buffer(char buffer[], int *buff_ind)
 {
