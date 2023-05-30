@@ -6,17 +6,15 @@
 */
 int p_integer(va_list args)
 {
-	int base;
-	long int n;
-	unsigned long int n2;
+	int base, n, n2;
 
-	n = va_arg(args, long int);
+	n = va_arg(args, int);
 	base = 1;
 
 	if (n < 0)
 	{
 		_putchar('-');
-		n2 = (unsigned long int)(n * -1);
+		n2 = n * -1;
 	}
 	else
 		n2 = n;
