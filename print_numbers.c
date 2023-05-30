@@ -6,8 +6,7 @@
 */
 int p_integer(va_list args)
 {
-	int n, base;
-	unsigned int n2;
+	int base, n, n2;
 
 	n = va_arg(args, int);
 	base = 1;
@@ -29,5 +28,5 @@ int p_integer(va_list args)
 		n2 = n2 % base;
 		base = base / 10;
 	}
-	return (n);
+	return (n2);
 }
