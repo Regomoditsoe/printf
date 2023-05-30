@@ -1,5 +1,5 @@
-# Implementing printf#
-## Group project##
+# Implementing print
+## Group project
 
 Write a function that produces output according to a format.
 
@@ -8,6 +8,9 @@ Prototype: int _printf(const char *format, ...);
 Returns: the number of characters printed (excluding the null byte used to end output to strings)
 
 write output to stdout, the standard output stream format is a character string. The format string is composed of zero or more directives. See man 3 printf for more detail. 
+
+
+***TASK 0***
 
 ### You need to handle the following conversion specifiers:
 
@@ -29,6 +32,7 @@ write output to stdout, the standard output stream format is a character string.
 
 
 
+***TASK 1***
 
 ### Handle the following conversion specifiers:
 
