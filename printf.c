@@ -91,7 +91,7 @@ int _printf(const char *format, ...)
 
 		/** Call a parser function */
 
-		printed_chars = printing_all(format, func_list, args);
+		printed_chars = p_all(format, func_list, args);
 
 	va_end(args);
 
