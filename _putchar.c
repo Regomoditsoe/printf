@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * _putchar - prints characters
  * @c: the input character
