@@ -11,11 +11,11 @@ write output to stdout, the standard output stream format is a character string.
 
 ### You need to handle the following conversion specifiers:
 
-*c
+* c
 
-*s
+* s
 
-*%
+* %
 
 **You don’t have to reproduce the buffer handling of the C library printf function**
 
@@ -33,9 +33,9 @@ write output to stdout, the standard output stream format is a character string.
 ### Handle the following conversion specifiers:
 
 
-*d
+* d
 
-*i
+* i
 
 **You don’t have to handle the flag characters**
 
