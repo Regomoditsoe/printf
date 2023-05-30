@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdarg.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * p_percent - declaring the function for percent specifier
@@ -56,9 +57,9 @@ int p_string(va_list args)
 
 int p_all(const char *format, convert_t *func_list, va_list args)
 {
-	(void)args; /** Mark the parameter as unused */
+	(void)args;
 	(void)func_list; /** Mark the parameter as unused */
-	(void)format; /** Mark the parameter as unused */
+	(void)format;
 	return (0);
 }
 
