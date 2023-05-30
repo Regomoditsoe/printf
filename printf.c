@@ -33,17 +33,6 @@ int p_string(va_list args)
 }
 
 /**
- * p_integer - declaring the function for d/i specifiers as unused
- * @args: the argument passed
- * Return: 0
-*/
-int p_integer(va_list args)
-{
-	(void)args; /** Mark the parameter as unused */
-	return (0);
-}
-
-/**
  * p_all - declaring the parsing function as unused
  * @format: the input
  * @func_list: the struct will choose the func from
@@ -57,12 +46,6 @@ int p_all(const char *format, convert_t *func_list, va_list args)
 	(void)format; /** Mark the parameter as unused */
 	return (0);
 }
-
-int p_percent(va_list args);
-int p_char(va_list args);
-int p_string(va_list args);
-int p_integer(va_list args);
-int printing_all(const char *format, convert_t *func_list, va_list args);
 
 /**
  * _printf - A function that produces output according to a format
