@@ -11,7 +11,7 @@
 int p_percent(va_list args)
 {
 	(void)args; /** Mark the parameter as unused */
-	putchar('%');
+	_putchar('%');
 	return (1);
 }
 
@@ -24,7 +24,7 @@ int p_char(va_list args)
 {
 	char c = (char)va_arg(args, int);
 
-	putchar(c);
+	_putchar(c);
 	return (1);
 }
 
@@ -40,7 +40,7 @@ int p_string(va_list args)
 
 	while (*str != '\0')
 	{
-		putchar(*str);
+		_putchar(*str);
 		str++;
 		count++;
 	}
@@ -77,13 +77,4 @@ int _printf(const char *format, ...)
 	va_end(args);
 
 	return (printed_chars);
-}
-
-int main (void)
-{
-	int printed_chars;
-
-	printed_chars = _printf("Hello, &s! Today is %c. The number is %d\n", "Alice" "M", 42);
-	printf("Number of characters printed: %d\n", printed_chars);
-	return (0);
 }
