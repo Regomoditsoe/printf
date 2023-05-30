@@ -6,27 +6,9 @@
 */
 int p_integer(va_list args)
 {
-	int base, n, n2;
+	int num = va_arg(args, int);
+	int x;
 
-	n = va_arg(args, int);
-	base = 1;
-
-	if (n < 0)
-	{
-		_putchar('-');
-		n2 = n * -1;
-	}
-	else
-		n2 = n;
-	while ((n2 / base) > 9)
-	{
-		base = base * 10;
-	}
-	while (base != 0)
-	{
-		_putchar((n2 / base) + '0');
-		n2 = n2 % base;
-		base = base / 10;
-	}
-	return (n2);
+	x = print_i(num);
+	return (x);
 }
