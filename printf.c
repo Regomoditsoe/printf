@@ -11,7 +11,7 @@
 int p_percent(va_list args)
 {
 	(void)args; /** Mark the parameter as unused */
-	_putchar('%');
+	putchar('%');
 	return (1);
 }
 
@@ -24,7 +24,7 @@ int p_char(va_list args)
 {
 	char c = (char)va_arg(args, int);
 
-	_putchar(c);
+	putchar(c);
 	return (1);
 }
 
@@ -40,7 +40,7 @@ int p_string(va_list args)
 
 	while (*str != '\0')
 	{
-		_putchar(*str);
+		putchar(*str);
 		str++;
 		count++;
 	}
