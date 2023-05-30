@@ -1,38 +1,56 @@
 #include "main.h"
-#include <stddef.h>
-#include <stdio.h>
-#include <stdarg.h>
-
-{
-	char *specifier;
-	int (*func)(va_list);
-} convert_t;
-
+/**
+ * p_percent - declaring the function for percent as unused
+ * @args: the argument passed
+ * Return: 0
+*/
 int p_percent(va_list args)
 {
 	(void)args; /** Mark the parameter as unused */
 	return (0);
 }
 
+/**
+ * p_char - declaring the function for c specifier as unused
+ * @args: the argument passed
+ * Return: 0
+*/
 int p_char(va_list args)
 {
 	(void)args; /** Mark the parameter as unused */
 	return (0);
 }
 
+/**
+ * p_string - declaring the function for s specifier as unused
+ * @args: the argument passed
+ * Return: 0
+*/
 int p_string(va_list args)
 {
 	(void)args; /** Mark the parameter as unused */
 	return (0);
 }
 
+/**
+ * p_integer - declaring the function for d/i specifiers as unused
+ * @args: the argument passed
+ * Return: 0
+*/
 int p_integer(va_list args)
 {
 	(void)args; /** Mark the parameter as unused */
 	return (0);
 }
 
-int parser(const char *format, convert_t *func_list, va_list args)
+/**
+ * p_all - declaring the parsing function as unused
+ * @format: the input
+ * @func_list: the struct will choose the func from
+ * @args: the input argument
+ * Return: 0
+*/
+int p_all(const char *format, convert_t *func_list, va_list args)
 {
 	(void)args; /** Mark the parameter as unused */
 	(void)func_list; /** Mark the parameter as unused */
@@ -44,7 +62,7 @@ int p_percent(va_list args);
 int p_char(va_list args);
 int p_string(va_list args);
 int p_integer(va_list args);
-int parser(const char *format, convert_t *func_list, va_list args);
+int printing_all(const char *format, convert_t *func_list, va_list args);
 
 /**
  * _printf - A function that produces output according to a format
@@ -73,7 +91,7 @@ int _printf(const char *format, ...)
 
 		/** Call a parser function */
 
-		printed_chars = parser(format, func_list, args);
+		printed_chars = printing_all(format, func_list, args);
 
 	va_end(args);
 
