@@ -6,11 +6,10 @@
  */
 int main(void)
 {
-    int printed_chars;
-
-    printed_chars = _printf("Hello, %s! Today is %c. The number is %d\n", "Alice", 'M', 42);
-    printf("Number of characters printed: %d\n", printed_chars);
-    return (0);
+	int printed_chars;
+	printed_chars = _printf("Hello, %s! Today is %c. The number is %d\n", "Alice", 'M', 42);
+	printf("Number of characters printed: %d\n", printed_chars);
+	return (0);
 }
 
 
