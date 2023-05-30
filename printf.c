@@ -48,22 +48,6 @@ int p_string(va_list args)
 }
 
 /**
- * p_all - declaring the parsing function as unused
- * @format: the input
- * @func_list: the struct will choose the func from
- * @args: the input argument
- * Return: 0
-*/
-
-int p_all(const char *format, convert_t *func_list, va_list args)
-{
-	(void)args;
-	(void)func_list; /** Mark the parameter as unused */
-	(void)format;
-	return (0);
-}
-
-/**
  * _printf - A function that produces output according to a format
  * @format: character string
  * Return: the number of characters printed

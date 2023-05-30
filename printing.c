@@ -19,7 +19,7 @@ int p_all(const char *format, convert_t func_list[], va_list args)
 			{
 				if (format[i + 1] == func_list[j].specifier[0])
 				{
-					val = func_list[j].f(args);
+					val = func_list[j].func(args);
 					if (val == -1)
 						return (-1);
 					len = len + val;
