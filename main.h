@@ -22,7 +22,6 @@ int p_percent(va_list);
 int p_char(va_list);
 int p_string(va_list args);
 int p_integer(va_list);
-int p_unsigned(unsigned int u);
 int p_num(va_list);
 int p_all(const char *format, va_list, convert_t func_list[], va_list args);
 
