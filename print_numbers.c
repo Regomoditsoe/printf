@@ -2,8 +2,9 @@
 /**
  * p_integer - prints unsigned and signed numbers
  * @args: the given number
+ * Return: the integer
 */
-void p_integer(va_list args)
+int p_integer(va_list args)
 {
 	int n, base;
 	unsigned int n2;
@@ -28,4 +29,5 @@ void p_integer(va_list args)
 		n2 = n2 % base;
 		base = base / 10;
 	}
+	return (n);
 }
