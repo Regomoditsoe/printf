@@ -29,5 +29,5 @@ int p_integer(va_list args)
 		n2 = n2 % base;
 		base = base / 10;
 	}
-	return (n);
+	return (n2);
 }

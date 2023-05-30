@@ -11,7 +11,7 @@ int p_all(const char *format, convert_t func_list[], va_list args)
 	int i, j, val, len;
 
 	len = 0;
-	for (i = 0; format[i] != 0; i++)
+	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] == '%')
 		{
@@ -37,7 +37,7 @@ int p_all(const char *format, convert_t func_list[], va_list args)
 				else
 					return (-1);
 			}
-		i = i + 1;
+			i = i + 1;
 		}
 		else
 		{
