@@ -60,6 +60,8 @@ int _printf(const char *format, ...)
 		{"%", p_percent},
 		{"c", p_char},
 		{"s", p_string},
+		{"d", p_integer},
+		{"i", p_integer},
 		{NULL, NULL}
 	};
 
