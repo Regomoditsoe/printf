@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * p_percent - declaring the function for percent as unused
  * @args: the argument passed
