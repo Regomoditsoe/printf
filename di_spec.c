@@ -11,13 +11,11 @@ int print_i(int n)
 
 	if (n < 0)
 	{
-		_putchar('-');
+		len += _putchar('-');
 		num *= -1;
-		len = len + 1;
 	}
 	if ((num / 10) > 0)
 		print_i(num / 10);
-	_putchar((num % 10) + 48);
-	len = len + 1;
+	len += _putchar((num % 10) + 48);
 	return (len);
 }
