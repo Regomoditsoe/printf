@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * p_all - parses the files and gets the length
  * @format: input format
@@ -8,25 +9,25 @@
 */
 int p_all(const char *format, convert_t func_list[], va_list args)
 {
-	int i, j, val, len;
+	int i, l, val, len;
 
 	len = 0;
 	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] == '%')
 		{
-			for (j = 0; func_list[j].specifier != NULL; j++)
+			for (l = 0; func_list[l].specifier != NULL; l++)
 			{
-				if (format[i + 1] == func_list[j].specifier[0])
+				if (format[i + 1] == func_list[l].specifier[0])
 				{
-					val = func_list[j].func(args);
+					val = func_list[l].func(args);
 					if (val == -1)
 						return (-1);
 					len = len + val;
 					break;
 				}
 			}
-			if (func_list[j].specifier == NULL && format[i + 1] != ' ')
+			if (func_list[l].specifier == NULL && format[i + 1] != ' ')
 			{
 				if (format[i + 1] != '\0')
 				{
