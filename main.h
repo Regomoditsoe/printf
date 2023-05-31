@@ -26,8 +26,9 @@ int _printf(const char *format, ...);
 int p_percent(va_list);
 int p_char(va_list);
 int p_string(va_list args);
+int print_unsgined_number(unsigned int n);
+int print_number(va_list);
 int p_integer(va_list);
-int print_i(int);
 int p_all(const char *format, convert_t func_list[], va_list args);
 
 #endif
