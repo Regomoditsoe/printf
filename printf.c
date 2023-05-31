@@ -35,7 +35,7 @@ int p_char(va_list args)
 */
 int p_string(va_list args)
 {
-	char *str = va_arg(args, char *);
+	const char *str = va_arg(args, const char *);
 	int count = 0;
 
 	if (str == NULL)
