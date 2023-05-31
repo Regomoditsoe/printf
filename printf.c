@@ -43,12 +43,14 @@ int p_string(va_list args)
 		str = "(null)";
 		count = count + 6;
 	}
-
-	while (*str != '\0')
+	else
 	{
-		_putchar(*str);
-		str++;
-		count++;
+		while (*str != '\0')
+		{
+			_putchar(*str);
+			str++;
+			count++;
+		}
 	}
 		return (count);
 }
