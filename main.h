@@ -29,5 +29,6 @@ int p_string(va_list args);
 int p_integer(va_list);
 int print_i(int);
 int p_all(const char *format, convert_t func_list[], va_list args);
+int p_rev(va_list);
 
 #endif
