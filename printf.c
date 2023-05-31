@@ -72,7 +72,7 @@ int _printf(const char *format, ...)
 
 	va_start(args, format);
 
-		printed_chars = p_all(format, func_list, args);
+	printed_chars = p_all(format, func_list, args);
 
 	va_end(args);
 
