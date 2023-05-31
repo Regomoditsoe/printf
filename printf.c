@@ -41,16 +41,12 @@ int p_string(va_list args)
 	if (str == NULL)
 	{
 		str = "(null)";
-		count = count + 6;
 	}
-	else
+	while (*str != '\0')
 	{
-		while (*str != '\0')
-		{
-			_putchar(*str);
-			str++;
-			count++;
-		}
+		_putchar(*str);
+		str++;
+		count++;
 	}
 		return (count);
 }
