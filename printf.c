@@ -41,6 +41,7 @@ int p_string(va_list args)
 	if (str == NULL)
 	{
 		str = "(null)";
+		count = count + 6;
 	}
 
 	while (*str != '\0')
