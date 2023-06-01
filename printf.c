@@ -58,7 +58,7 @@ int p_string(va_list args)
  */
 int _printf(const char *format, ...)
 {
-	int printed_chars;
+	int printed_chars = 0;
 
 	convert_t func_list[] = {
 		{"%", p_percent},

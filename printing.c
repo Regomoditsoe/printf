@@ -16,13 +16,14 @@ int p_all(const char *format, convert_t func_list[], va_list args)
 	{
 		if (format[i] == '%')
 		{
-			for (l = 0; func_list[l].specifier != NULL; l++)
+			for (l = 0; func_list[i].specifier != NULL; l++)
 			{
 				if (format[i + 1] == func_list[l].specifier[0])
 				{
 					val = func_list[l].func(args);
 					if (val == -1)
 						return (-1);
+
 					len = len + val;
 					break;
 				}
@@ -32,8 +33,9 @@ int p_all(const char *format, convert_t func_list[], va_list args)
 				if (format[i + 1] != '\0')
 				{
 					_putchar(format[i]);
+					_putchar(' ');
 					_putchar(format[i + 1]);
-					len = len + 2;
+					len = len + 3;
 				}
 				else
 					return (-1);
@@ -48,3 +50,5 @@ int p_all(const char *format, convert_t func_list[], va_list args)
 	}
 	return (len);
 }
+
+

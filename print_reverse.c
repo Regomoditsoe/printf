@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_rev - function prints a string in reverse
+ * p_rev - function prints a string in reverse
  * @args: the input list
  * Return: the length
 */
