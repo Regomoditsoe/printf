@@ -58,22 +58,28 @@ int p_string(va_list args)
  */
 int _printf(const char *format, ...)
 {
+	int printed_chars;
+
 	convert_t func_list[] = {
 		{"%", p_percent},
 		{"c", p_char},
 		{"s", p_string},
 		{"d", p_integer},
+		{"i", p_integer},
+		{"r", p_rev},
 		{NULL, NULL}
 	};
 
 	va_list args;
-	int len;
+
+	if (format == NULL)
+		return (-1);
 
 	va_start(args, format);
 
-	len = p_all(format, func_list, args);
+	printed_chars = p_all(format, func_list, args);
 
 	va_end(args);
 
-	return (len);
+	return (printed_chars);
 }
