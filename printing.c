@@ -24,7 +24,7 @@ int p_all(const char *format, convert_t func_list[], va_list args)
 					if (val == -1)
 						return (-1);
 
-					len = len + val;
+					len += val;
 					break;
 				}
 			}
@@ -35,12 +35,12 @@ int p_all(const char *format, convert_t func_list[], va_list args)
 					_putchar(format[i]);
 					_putchar(' ');
 					_putchar(format[i + 1]);
-					len = len + 3;
+					len += 3;
 				}
 				else
 					return (-1);
 			}
-			i += 1;
+			i++;
 		}
 		else
 		{
