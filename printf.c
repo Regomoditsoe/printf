@@ -65,8 +65,6 @@ int _printf(const char *format, ...)
 		{"c", p_char},
 		{"s", p_string},
 		{"d", p_integer},
-		{"i", p_integer},
-		{"r", p_rev},
 		{NULL, NULL}
 	};
 
